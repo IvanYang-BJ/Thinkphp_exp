@@ -29,5 +29,12 @@ class IndexController extends Controller {
         $this->show('Database Name is '.$databaseName.BR);
         $this->show('Database Username is '.$databaseUsername.BR);
         $this->show('Database Password is '.$databasePassword.BR);
+
+        //http://localhost/thinkphp_self/?m=Home&c=Index&a=index&var_normal=sdfsafadsfads
+        $var_normal = $_GET['var_normal'];
+        $this->show('var_normal is '.$var_normal.BR);
+        //http://localhost/thinkphp_self/home.php/Index/index?var_pathinfo=dsfadjksfjdksa;jfdksla;
+        $var_pathinfo = $_GET['var_pathinfo'];
+        $this->show('var_pathinfo is '.$var_pathinfo.BR);
     }
 }
