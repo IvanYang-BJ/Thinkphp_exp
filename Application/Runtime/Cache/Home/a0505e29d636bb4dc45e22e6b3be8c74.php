@@ -1,0 +1,1 @@
+<?php if (!defined('THINK_PATH')) exit();?>CONFIG_VALUE is Config_value<br>

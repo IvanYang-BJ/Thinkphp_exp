@@ -1,0 +1,1 @@
+<?php if (!defined('THINK_PATH')) exit();?>Database Username is db_user1<br>

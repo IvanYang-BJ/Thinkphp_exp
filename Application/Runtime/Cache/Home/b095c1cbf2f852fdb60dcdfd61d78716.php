@@ -1,0 +1,1 @@
+<?php if (!defined('THINK_PATH')) exit();?>home_config_array_item_one is ITEM_VALUE1<br>
