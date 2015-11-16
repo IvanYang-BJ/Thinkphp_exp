@@ -8,8 +8,7 @@ class IndexController extends Controller {
         $home_config_value = C('CONFIG_VALUE');
         $home_config_null = C('CONFIG_NULL',null,'Not Config');
         $home_config_array_item_one = C('CONFIG_ARRAY.CONFIG_ARRAY_ITEM_ONE');
-        //$home_config_array_item_two = C('CONFIG_ARRAY.CONFIG_ARRAY_ITEM_TWO');
-        //$this->show('home_config_array_item_two is '.$home_config_array_item_two.'<br>');
+
         C('CONFIG_ARRAY.CONFIG_ARRAY_ITEM_TWO','33333');
         $home_config_array_item_two = C('CONFIG_ARRAY.CONFIG_ARRAY_ITEM_TWO');
         $this->show('CONFIG_NAME is '.$home_config_name.'<br>');
@@ -36,5 +35,6 @@ class IndexController extends Controller {
         //http://localhost/thinkphp_self/home.php/Index/index?var_pathinfo=dsfadjksfjdksa;jfdksla;
         $var_pathinfo = $_GET['var_pathinfo'];
         $this->show('var_pathinfo is '.$var_pathinfo.BR);
+        $this->show('URL_MODEL is '. C(URL_MODEL).BR);
     }
 }
