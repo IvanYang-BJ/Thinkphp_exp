@@ -18,6 +18,7 @@ if(version_compare(PHP_VERSION,'5.3.0','<'))  die('require PHP > 5.3.0 !');
 define('APP_DEBUG',True);
 
 define('BIND_MODULE','Home');
+define('BIND_CONTROLLER','Index');
 
 define('BUILD_MODEL_LIST','User,Menu');
 // 定义应用目录
