@@ -1,8 +1,33 @@
 <?php
 namespace Home\Controller;
 use Think\Controller;
+define('BR','<br>');
 class IndexController extends Controller {
     public function index(){
-        $this->show('<style type="text/css">*{ padding: 0; margin: 0; } div{ padding: 4px 48px;} body{ background: #fff; font-family: "微软雅黑"; color: #333;font-size:24px} h1{ font-size: 100px; font-weight: normal; margin-bottom: 12px; } p{ line-height: 1.8em; font-size: 36px } a,a:hover,{color:blue;}</style><div style="padding: 24px 48px;"> <h1>:)</h1><p>欢迎使用 <b>ThinkPHP</b>！</p><br/>版本 V{$Think.version}</div><script type="text/javascript" src="http://ad.topthink.com/Public/static/client.js"></script><thinkad id="ad_55e75dfae343f5a1"></thinkad><script type="text/javascript" src="http://tajs.qq.com/stats?sId=9347272" charset="UTF-8"></script>','utf-8');
+        $home_config_name = C('CONFIG_NAME');
+        $home_config_value = C('CONFIG_VALUE');
+        $home_config_null = C('CONFIG_NULL',null,'Not Config');
+        $home_config_array_item_one = C('CONFIG_ARRAY.CONFIG_ARRAY_ITEM_ONE');
+        //$home_config_array_item_two = C('CONFIG_ARRAY.CONFIG_ARRAY_ITEM_TWO');
+        //$this->show('home_config_array_item_two is '.$home_config_array_item_two.'<br>');
+        C('CONFIG_ARRAY.CONFIG_ARRAY_ITEM_TWO','33333');
+        $home_config_array_item_two = C('CONFIG_ARRAY.CONFIG_ARRAY_ITEM_TWO');
+        $this->show('CONFIG_NAME is '.$home_config_name.'<br>');
+        $this->show('CONFIG_VALUE is '.$home_config_value.'<br>');
+        $this->show('CONFIG_NULL is '.$home_config_null.'<br>');
+        $this->show('home_config_array_item_one is '.$home_config_array_item_one.'<br>');
+        $this->show('home_config_array_item_two is '.$home_config_array_item_two.'<br>');
+
+
+        $username = C('USERNAME');
+        $password = C('PASSWORD');
+        $this->show('Username is '.$username.'<br>');
+        $this->show('Password is '.$password.'<br>');
+        $databaseName = C('DATABASE_NAME');
+        $databaseUsername = C('DATABASE_USERNAME');
+        $databasePassword = C('DATABASE_PASSWORD');
+        $this->show('Database Name is '.$databaseName.BR);
+        $this->show('Database Username is '.$databaseUsername.BR);
+        $this->show('Database Password is '.$databasePassword.BR);
     }
 }
