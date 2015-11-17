@@ -37,5 +37,7 @@ class IndexController extends Controller {
         $this->show('var_pathinfo is '.$var_pathinfo.BR);
         $this->show('URL_MODEL is '. C(URL_MODEL).BR);
         $this->show('adsfdsaf');
+        tag('my_tag',$databaseName);
+        \Think\Hook::listen('my_tag');
     }
 }

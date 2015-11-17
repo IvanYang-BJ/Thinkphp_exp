@@ -12,8 +12,12 @@ namespace Home\Behavior;
 class TestBehavior
 {
     public function run(&$params){
-        if(C('TEST_PARAM')) {
+       echo "In TestBehavior";
+        /* if(C('INDEX')) {
             echo 'RUNTEST BEHAVIOR '.$params;
         }
+        else{
+            echo 'Run Test Behavior No Params';
+        }*/
     }
 }
