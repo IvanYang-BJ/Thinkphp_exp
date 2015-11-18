@@ -7,17 +7,16 @@
  */
 
 namespace Home\Behavior;
-
+use Think\Behavior;
 
 class TestBehavior
 {
     public function run(&$params){
-       echo "In TestBehavior";
-        /* if(C('INDEX')) {
-            echo 'RUNTEST BEHAVIOR '.$params;
+        if(C('DATABASE_NAME')) {
+            echo 'RUNTEST BEHAVIOR '.$params.BR;
         }
         else{
-            echo 'Run Test Behavior No Params';
-        }*/
+            echo 'Run Test Behavior No Params'.BR;
+        }
     }
 }

@@ -6,5 +6,5 @@
  * Time: 18:40
  */
 return array(
-    'my_tag' => array('Home\Behavior\Test')
+    'my_tag' => array('Home\Behavior\TestBehavior')
 );
