@@ -17,4 +17,5 @@ return array(
         'news/:id'               => 'News/read',
         'news/read/:id'          => '/news/:1',
         ),
+    'CONTROLLER_LEVEL' => 1
 );
