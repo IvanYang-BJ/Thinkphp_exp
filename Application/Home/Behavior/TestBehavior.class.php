@@ -12,6 +12,7 @@ use Think\Behavior;
 class TestBehavior
 {
     public function run(&$params){
+        echo "In TestBehavior!!!!".BR;
         if(C('DATABASE_USERNAME')) {
             echo 'RUNTEST BEdfadsfadsHAVIOR '.$params.BR;
         }

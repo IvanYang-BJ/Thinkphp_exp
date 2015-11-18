@@ -40,5 +40,10 @@ class IndexController extends Controller {
         tag('my_tag',$databaseName);
         //\Think\Hook::listen('my_tag');
         $this->show('End Behavior'.BR);
+
+        $path_parts = pathinfo("/www/htdocs/index.html");
+        echo $path_parts["dirname"] . BR;
+        echo $path_parts["basename"] . BR;
+        echo $path_parts["extension"] . BR;
     }
 }
