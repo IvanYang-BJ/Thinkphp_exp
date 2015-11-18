@@ -18,11 +18,19 @@ class TestController extends Controller
     public function _before_echoTest(){
         echo 'before<br/>';
     }
-
+    public function _before_echoTestSecond(){
+        echo 'before echo Test Second!<br/>';
+    }
     public function echoTest(){
         echo'echoTest'.BR;
     }
 
+    public function echoTestSecond(){
+        echo 'echoTestSecond'.BR;
+    }
+    public function _after_echoTestSecond(){
+        echo 'After echo Test Second!<br/>';
+    }
     public function _after_echoTest(){
         echo 'after<br/>';
     }
