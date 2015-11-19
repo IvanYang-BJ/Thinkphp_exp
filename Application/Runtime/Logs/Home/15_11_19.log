@@ -1,0 +1,27 @@
+[ 2015-11-19T13:34:14+08:00 ] ::1 /thinkphp_self/home.php/bolg/read/id/2
+ERR: 无法加载控制器:Bolg
+
+[ 2015-11-19T13:34:30+08:00 ] ::1 /thinkphp_self/home.php/Bolg/read/id/2
+ERR: 无法加载控制器:Bolg
+
+[ 2015-11-19T13:34:31+08:00 ] ::1 /thinkphp_self/home.php/Bolg/read/id/2
+ERR: 无法加载控制器:Bolg
+
+[ 2015-11-19T13:34:32+08:00 ] ::1 /thinkphp_self/home.php/Bolg/read/id/2
+ERR: 无法加载控制器:Bolg
+
+[ 2015-11-19T13:34:32+08:00 ] ::1 /thinkphp_self/home.php/Bolg/read/id/2
+ERR: 无法加载控制器:Bolg
+
+[ 2015-11-19T13:34:32+08:00 ] ::1 /thinkphp_self/home.php/Bolg/read/id/2
+ERR: 无法加载控制器:Bolg
+
+[ 2015-11-19T13:34:32+08:00 ] ::1 /thinkphp_self/home.php/Bolg/read/id/2
+ERR: 无法加载控制器:Bolg
+
+[ 2015-11-19T13:49:18+08:00 ] ::1 /thinkphp_self/home.php/blog/read
+ERR: 参数错误或者未定义:id
+
+[ 2015-11-19T13:49:26+08:00 ] ::1 /thinkphp_self/home.php/blog/read/id
+ERR: 参数错误或者未定义:id
+
