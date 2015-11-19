@@ -34,5 +34,11 @@ class TestController extends Controller
     public function _after_echoTest(){
         echo 'after<br/>';
     }
+    public function resultSuccess(){
+        echo "Success".BR;
+    }
 
+    public function resultError(){
+        echo "Error".BR;
+    }
 }

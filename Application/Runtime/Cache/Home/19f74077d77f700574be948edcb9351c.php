@@ -1,0 +1,1 @@
+<?php if (!defined('THINK_PATH')) exit();?>URL_MODEL is 1<br>
