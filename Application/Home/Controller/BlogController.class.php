@@ -15,6 +15,7 @@ class BlogController extends Controller
     //http://localhost/thinkphp_self/home.php/blog/read/id/2
     public function read($id=0){
         echo 'id = '.$id.BR;
+        echo __EXT__;
     }
     //http://localhost/thinkphp_self/home.php/blog/archive/year/1000/month/10
     public function archive($year=2015,$month=11){
