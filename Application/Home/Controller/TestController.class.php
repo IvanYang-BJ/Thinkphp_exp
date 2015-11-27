@@ -10,7 +10,6 @@
  * */
 namespace Home\Controller;
 
-
 use Think\Controller;
 define('BR','<br>');
 class TestController extends Controller

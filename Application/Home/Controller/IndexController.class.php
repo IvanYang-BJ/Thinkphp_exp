@@ -15,32 +15,16 @@ class IndexController extends Controller {
         $userEvent->login();
         //$test= A(Test);                             //实例化方法正确
         $test = new \Home\Controller\TestController();//实力化方法正确
+        echo BR;
         $test->echoTest();
         echo $_SERVER["HTTP_REFERER"];
-        $a = rand(0,100);
-        $b = rand(0,100);
 
-
-        if($a>$b){
-            $result = 1;
-        }else{
-            $result = 0;
-        }
-        echo $a.BR.$b.BR.$result.BR.'1111fdsafds';
-        if($result){
-            $this->success('成功'/*,'/Home/Tpl/success.tpl'*/);
-        }
-        else{
-            $this->error('失败'/*,'/Home/Tpl/success.tpl'*/);
-        }
-/*        if($result){
-            $this->redirect('Test/echoTest',array(),3,'Directing...');
-        }else{
-            $this->redirect('Test/echoTestSecond',array(),3,'Directing...');
-        }*/
+        $id = I('get.id','','number_int');
+        echo BR.$id.BR;
     }
     public function resultSuccess(){
         echo "Success".BR;
+        return 'success';
     }
 
     public function resultError(){

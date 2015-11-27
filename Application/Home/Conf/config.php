@@ -18,7 +18,5 @@ return array(
         'news/read/:id'          => '/news/:1',
         ),
     'CONTROLLER_LEVEL' => 1,
-    'URL_HTML_SUFFIX'=>'',
-    'TMPL_ACTION_ERROR' => '/Home/Tpl/success.tpl',
-    'TMPL_ACTION_SUCCESS' => '/Home/Tpl/success.tpl'
+    'URL_HTML_SUFFIX'=>''
 );
