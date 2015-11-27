@@ -30,4 +30,12 @@ class IndexController extends Controller {
     public function resultError(){
         echo "Error".BR;
     }
+    //空方法，所有没有定义的action都会跳转至这个方法
+    //http://10.0.7.83/Thinkphp_self/trunk/home.php/Index/beijing
+    public function _empty($name){
+        $this->city($name);
+    }
+    protected function city($name){
+        echo 'City is '.$name.BR;
+    }
 }
