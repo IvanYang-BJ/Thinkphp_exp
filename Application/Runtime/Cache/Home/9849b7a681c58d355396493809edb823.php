@@ -1,1 +1,0 @@
-<?php if (!defined('THINK_PATH')) exit();?>Password is password<br>

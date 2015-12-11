@@ -19,6 +19,15 @@ class IndexController extends Controller {
         $test->echoTest();
         echo $_SERVER["HTTP_REFERER"];
 
+        //$User = new \Home\Model\UserModel();
+        $User = D('User');
+        $User->select();
+        $fields = $User->getDbFields();
+        foreach ($fields as $key => $value){
+            echo $key.'  '.$value.BR;
+        }
+
+
         $id = I('get.id','','number_int');
         echo BR.$id.BR;
     }

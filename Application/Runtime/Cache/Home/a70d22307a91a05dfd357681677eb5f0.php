@@ -1,1 +1,0 @@
-<?php if (!defined('THINK_PATH')) exit();?>Database Password is db_pd1BR
