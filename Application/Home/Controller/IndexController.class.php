@@ -17,15 +17,24 @@ class IndexController extends Controller {
         $test = new \Home\Controller\TestController();//实力化方法正确
         echo BR;
         $test->echoTest();
-        echo $_SERVER["HTTP_REFERER"];
+        echo $_SERVER["HTTP_REFERER"].BR;
 
         //$User = new \Home\Model\UserModel();
-        $User = D('User');
-        $User->select();
-        $fields = $User->getDbFields();
-        foreach ($fields as $key => $value){
+        $UserSelect = D('User');
+        $UserSelect->where('id=3')->find();
+        $UserSelect->name='jkljkl';
+        $UserSelect->save();
+
+
+
+
+
+
+
+        $fields = $UserSelect->getDbFields();
+        /*foreach ($fields as $key => $value){
             echo $key.'  '.$value.BR;
-        }
+        }*/
 
 
         $id = I('get.id','','number_int');
