@@ -27,8 +27,8 @@ class IndexController extends Controller {
         echo $UserInfoFind['id'].BR;
         echo $UserInfoFind['name'].BR;
         echo $UserInfoFind['age'].BR;
-
-        $UserInfoSelect = $UserSelect->select();
+        echo 'UserInfoSelect'.BR;
+        $UserInfoSelect = $UserSelect->field('name,age')->select();
         echo $UserInfoSelect[1]['id'].BR;
         echo $UserInfoSelect[1]['name'].BR;
         echo $UserInfoSelect[1]['age'].BR;
