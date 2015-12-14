@@ -18,9 +18,13 @@ class IndexController extends Controller {
         echo BR;
         $test->echoTest();
         echo $_SERVER["HTTP_REFERER"].BR;
+        /*echo "UserInfoFind".BR;
+        dump($UserInfoFind);
+        echo "UserInfoSelect".BR;
+        dump($UserInfoSelect);*/
 
         //$User = new \Home\Model\UserModel();
-        $UserSelect = D('User');
+        /*$UserSelect = D('User');
         $UserInfoFind = $UserSelect->where('id=3')->find();
         //$UserSelect->name='jkljkl';
         //$UserSelect->save();
@@ -31,18 +35,33 @@ class IndexController extends Controller {
         $UserInfoSelect = $UserSelect->field('name,age')->select();
         echo $UserInfoSelect[1]['id'].BR;
         echo $UserInfoSelect[1]['name'].BR;
-        echo $UserInfoSelect[1]['age'].BR;
-
-        echo "UserInfoFind".BR;
-        dump($UserInfoFind);
-        echo "UserInfoSelect".BR;
-        dump($UserInfoSelect);
+        echo $UserInfoSelect[1]['age'].BR;*/
 
 
+        $User = M('User');
+        //$data['id'] = '6';
+        $data['name'] = 'TestCreate';
+        $data['age'] = '24';
+        $data['test'] = 'test';
+        if($User->create($data)){
+            $result = $User->field('age')->add();
+            if($result){
+                $insertId = $result;
+                echo $insertId;
+            }
+        }
+
+        $dataList[] = array('name'=>'testList1','age'=>'34');
+        $dataList[] = array('name'=>'testList2','age'=>'35');
+        $dataList[] = array('name'=>'testList3','age'=>'36');
+
+        $User->addAll($dataList);
+        //dump($User);
 
 
-        $fields = $UserSelect->getDbFields();
-        /*foreach ($fields as $key => $value){
+
+        /*$fields = $UserSelect->getDbFields();
+        foreach ($fields as $key => $value){
             echo $key.'  '.$value.BR;
         }*/
 
