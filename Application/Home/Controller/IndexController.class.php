@@ -21,12 +21,22 @@ class IndexController extends Controller {
 
         //$User = new \Home\Model\UserModel();
         $UserSelect = D('User');
-        $UserSelect->where('id=3')->find();
-        $UserSelect->name='jkljkl';
-        $UserSelect->save();
+        $UserInfoFind = $UserSelect->where('id=3')->find();
+        //$UserSelect->name='jkljkl';
+        //$UserSelect->save();
+        echo $UserInfoFind['id'].BR;
+        echo $UserInfoFind['name'].BR;
+        echo $UserInfoFind['age'].BR;
 
+        $UserInfoSelect = $UserSelect->select();
+        echo $UserInfoSelect[1]['id'].BR;
+        echo $UserInfoSelect[1]['name'].BR;
+        echo $UserInfoSelect[1]['age'].BR;
 
-
+        echo "UserInfoFind".BR;
+        dump($UserInfoFind);
+        echo "UserInfoSelect".BR;
+        dump($UserInfoSelect);
 
 
 
