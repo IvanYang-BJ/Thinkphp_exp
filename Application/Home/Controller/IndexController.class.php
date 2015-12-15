@@ -31,32 +31,40 @@ class IndexController extends Controller {
         echo $UserInfoFind['id'].BR;
         echo $UserInfoFind['name'].BR;
         echo $UserInfoFind['age'].BR;
-        echo 'UserInfoSelect'.BR;
+        echo 'UserInfoSelect'.BR;*/
+        $UserSelect = D('User');
         $UserInfoSelect = $UserSelect->field('name,age')->select();
+        echo count($UserInfoSelect);
         echo $UserInfoSelect[1]['id'].BR;
         echo $UserInfoSelect[1]['name'].BR;
-        echo $UserInfoSelect[1]['age'].BR;*/
+        echo $UserInfoSelect[1]['age'].BR;
 
 
         $User = M('User');
         //$data['id'] = '6';
         $data['name'] = 'TestCreate';
-        $data['age'] = '24';
+        $data['age'] = '241244';
         $data['test'] = 'test';
-        if($User->create($data)){
+        $User->where('id=10')->save($data);
+        $User->where('id=3')->setInc('age',4);
+
+        $User->where('age>30')->order('age asc')->limit('5')->delete();
+        /*单条数据创建
+         * if($User->create($data)){
             $result = $User->field('age')->add();
             if($result){
                 $insertId = $result;
                 echo $insertId;
             }
-        }
+        }*/
 
+        /*//多条数据创建
         $dataList[] = array('name'=>'testList1','age'=>'34');
         $dataList[] = array('name'=>'testList2','age'=>'35');
         $dataList[] = array('name'=>'testList3','age'=>'36');
 
         $User->addAll($dataList);
-        //dump($User);
+        //dump($User);*/
 
 
 
