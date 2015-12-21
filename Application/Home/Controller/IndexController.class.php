@@ -60,16 +60,21 @@ class IndexController extends Controller {
         dump($User45);
 
         //2 使用数组作为查询方式
-        $condition['age'] = '24';
+        /*$condition['age'] = '24';
         //$condition['name'] = '';
         $User24 = $User->where($condition)->select();
-        dump($User24);
+        dump($User24);*/
 
         //3 使用对象方式查询
         $conditionClass = new \stdClass();
         $conditionClass->age = '24';
         $UserClass = $User->where($conditionClass)->select();
         dump($UserClass);
+
+        //表达式查询
+        $condition['age'] = array('gt',25);
+        $User24 = $User->where($condition)->select();
+        dump($User24);
 
         /*单条数据创建
          * if($User->create($data)){
