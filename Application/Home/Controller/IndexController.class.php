@@ -50,12 +50,27 @@ class IndexController extends Controller {
 
         //$User->where('age>30')->order('age asc')->limit('5')->delete();
 
-        $User->create();
+        /*$User->create();
         $User->name='TestAR';
         $User->age='45';
-        $User->add();
+        $User->add();*/
 
-        
+        //1 字符串查询方式
+        $User45 = $User->where('age=45 and name=\'TestAR\'')->select();
+        dump($User45);
+
+        //2 使用数组作为查询方式
+        $condition['age'] = '24';
+        //$condition['name'] = '';
+        $User24 = $User->where($condition)->select();
+        dump($User24);
+
+        //3 使用对象方式查询
+        $conditionClass = new \stdClass();
+        $conditionClass->age = '24';
+        $UserClass = $User->where($conditionClass)->select();
+        dump($UserClass);
+
         /*单条数据创建
          * if($User->create($data)){
             $result = $User->field('age')->add();
