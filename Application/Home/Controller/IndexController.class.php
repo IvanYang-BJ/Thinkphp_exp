@@ -48,7 +48,12 @@ class IndexController extends Controller {
         $User->where('id=10')->save($data);
         $User->where('id=3')->setInc('age',4);
 
-        $User->where('age>30')->order('age asc')->limit('5')->delete();
+        //$User->where('age>30')->order('age asc')->limit('5')->delete();
+
+        $User->create();
+        $User->name='TestAR';
+        $User->age='45';
+        $User->add();
         /*单条数据创建
          * if($User->create($data)){
             $result = $User->field('age')->add();
