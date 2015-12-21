@@ -41,12 +41,19 @@ class IndexController extends Controller {
 
 
         $User = M('User');
+        $mapor['name|address'] = 'TESTAR';
+        $UserOr = $User->where($mapor)->select();
+        dump($UserOr);
+
+        $mapand['name&address'] = array('TESTAR1111','TESTAR','_multi'=>true);
+        $UserAnd = $User->where($mapand)->select();
+        dump($UserAnd);
         //$data['id'] = '6';
-        $data['name'] = 'TestCreate';
-        $data['age'] = '241244';
-        $data['test'] = 'test';
-        $User->where('id=10')->save($data);
-        $User->where('id=3')->setInc('age',4);
+        //$data['name'] = 'TESTAR';
+        //$data['age'] = '241244';
+        //$data['test'] = 'test';
+        //$User->where('id<>10')->save($data);
+        //$User->where('id=3')->setInc('age',4);
 
         //$User->where('age>30')->order('age asc')->limit('5')->delete();
 
@@ -55,15 +62,15 @@ class IndexController extends Controller {
         $User->age='45';
         $User->add();*/
 
-        //1 字符串查询方式
+/*        //1 字符串查询方式
         $User45 = $User->where('age=45 and name=\'TestAR\'')->select();
         dump($User45);
 
         //2 使用数组作为查询方式
-        /*$condition['age'] = '24';
+        $condition['age'] = '24';
         //$condition['name'] = '';
         $User24 = $User->where($condition)->select();
-        dump($User24);*/
+        dump($User24);
 
         //3 使用对象方式查询
         $conditionClass = new \stdClass();
@@ -74,7 +81,11 @@ class IndexController extends Controller {
         //表达式查询
         $condition['age'] = array('gt',25);
         $User24 = $User->where($condition)->select();
-        dump($User24);
+        dump($User24);*/
+
+
+
+
 
         /*单条数据创建
          * if($User->create($data)){
