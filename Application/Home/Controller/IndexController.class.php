@@ -55,7 +55,7 @@ class IndexController extends Controller {
         $User->age='45';
         $User->add();
 
-        echo "Git Push Error!";
+        
         /*单条数据创建
          * if($User->create($data)){
             $result = $User->field('age')->add();
