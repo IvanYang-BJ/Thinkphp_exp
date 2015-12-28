@@ -18,27 +18,28 @@ class IndexController extends Controller {
         echo BR;
         $test->echoTest();
         echo $_SERVER["HTTP_REFERER"].BR;
+
         /*echo "UserInfoFind".BR;
         dump($UserInfoFind);
         echo "UserInfoSelect".BR;
         dump($UserInfoSelect);*/
 
         //$User = new \Home\Model\UserModel();
-        /*$UserSelect = D('User');
+        $UserSelect = D('User');
         $UserInfoFind = $UserSelect->where('id=3')->find();
         //$UserSelect->name='jkljkl';
         //$UserSelect->save();
         echo $UserInfoFind['id'].BR;
         echo $UserInfoFind['name'].BR;
         echo $UserInfoFind['age'].BR;
-        echo 'UserInfoSelect'.BR;*/
+        echo 'UserInfoSelect'.BR;
         $UserSelect = D('User');
         $UserInfoSelect = $UserSelect->field('name,age')->select();
         echo count($UserInfoSelect).BR;
-        dump($UserInfoSelect[1]);
-        echo $UserInfoSelect[1]['id'].BR;
-        echo $UserInfoSelect[1]['name'].BR;
-        echo $UserInfoSelect[1]['age'].BR;
+        dump($UserInfoSelect[0]);
+        echo $UserInfoSelect[0]['id'].BR;
+        echo $UserInfoSelect[0]['name'].BR;
+        echo $UserInfoSelect[0]['age'].BR;
 
 
         $User = M('User');
@@ -52,20 +53,21 @@ class IndexController extends Controller {
         echo '$UserAnd'.BR;
         dump($UserAnd);
 
-        $UserByName = $User->getByName('TESTAR');
-        $UserByAge = $User->getByAge('241244');
+        $UserByName = $User->getByName('testList1');
+        $UserByAge = $User->getByAge('34');
         echo '$UserByName'.BR;
         dump($UserByName);
 
         echo '$UserByAge'.BR;
         dump($UserByAge);
 
-        $UserFieldByName = $User->getFieldByName('TESTAR222','id');
+        $UserFieldByName = $User->getFieldByName('testList1','id');
         echo '$UserFieldByName'.BR;
         dump($UserFieldByName);
 
         $UserSelectSQL = $User->select(false);
         dump($UserSelectSQL);
+
         //$data['id'] = '6';
         //$data['name'] = 'TESTAR';
         //$data['age'] = '241244';
@@ -132,6 +134,16 @@ class IndexController extends Controller {
 
         $id = I('get.id','','number_int');
         echo BR.$id.BR;
+    }
+
+    public function show(){
+        $array['name'] = 'yy';
+        $array['email'] = '1257@11.com';
+        $array['phone'] = '123321123123';
+
+        $this->assign($array);
+        $this->display('');
+
     }
     public function resultSuccess(){
         echo "Success".BR;
