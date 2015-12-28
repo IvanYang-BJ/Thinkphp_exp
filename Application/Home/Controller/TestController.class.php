@@ -12,8 +12,12 @@ namespace Home\Controller;
 
 use Think\Controller;
 define('BR','<br>');
+define("DEFAULT_VERSION", "v2.5.6-105");
+define("EGRET_URL", "http://update.runtime.egret.com/egret-runtime/v1/");
+define('LATEST', 'v1.5.5-146');
 class TestController extends Controller
 {
+
     public function _before_echoTest(){
         echo 'before<br/>';
     }
@@ -21,7 +25,8 @@ class TestController extends Controller
         echo 'before echo Test Second!<br/>';
     }
     public function echoTest(){
-        echo'echoTest'.BR;
+
+
     }
 
     public function echoTestSecond(){
