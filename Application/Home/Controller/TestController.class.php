@@ -25,7 +25,7 @@ class TestController extends Controller
         echo 'before echo Test Second!<br/>';
     }
     public function echoTest(){
-
+        echo 'In TestController!'.BR;
 
     }
 

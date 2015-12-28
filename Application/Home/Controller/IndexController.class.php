@@ -34,7 +34,8 @@ class IndexController extends Controller {
         echo 'UserInfoSelect'.BR;*/
         $UserSelect = D('User');
         $UserInfoSelect = $UserSelect->field('name,age')->select();
-        echo count($UserInfoSelect);
+        echo count($UserInfoSelect).BR;
+        dump($UserInfoSelect[1]);
         echo $UserInfoSelect[1]['id'].BR;
         echo $UserInfoSelect[1]['name'].BR;
         echo $UserInfoSelect[1]['age'].BR;
@@ -43,11 +44,28 @@ class IndexController extends Controller {
         $User = M('User');
         $mapor['name|address'] = 'TESTAR';
         $UserOr = $User->where($mapor)->select();
+        echo '$UserOr'.BR;
         dump($UserOr);
 
         $mapand['name&address'] = array('TESTAR1111','TESTAR','_multi'=>true);
         $UserAnd = $User->where($mapand)->select();
+        echo '$UserAnd'.BR;
         dump($UserAnd);
+
+        $UserByName = $User->getByName('TESTAR');
+        $UserByAge = $User->getByAge('241244');
+        echo '$UserByName'.BR;
+        dump($UserByName);
+
+        echo '$UserByAge'.BR;
+        dump($UserByAge);
+
+        $UserFieldByName = $User->getFieldByName('TESTAR222','id');
+        echo '$UserFieldByName'.BR;
+        dump($UserFieldByName);
+
+        $UserSelectSQL = $User->select(false);
+        dump($UserSelectSQL);
         //$data['id'] = '6';
         //$data['name'] = 'TESTAR';
         //$data['age'] = '241244';
