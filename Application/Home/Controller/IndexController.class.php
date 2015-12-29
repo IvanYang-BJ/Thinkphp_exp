@@ -142,7 +142,7 @@ class IndexController extends Controller {
         $array['phone'] = '123321123123';
         //$name = 'Thinkphp';
         $this->assign($array);
-        $this->show();
+        $this->display('a');
 
     }
     public function resultSuccess(){
