@@ -137,12 +137,14 @@ class IndexController extends Controller {
     }
 
     public function a(){
-        $array['name'] = 'yy';
+        $array['name'] = '杨洋';
         $array['email'] = '1257@11.com';
         $array['phone'] = '123321123123';
         //$name = 'Thinkphp';
         $this->assign($array);
-        $this->display('a');
+        $this->theme('Red')->display('index');
+        //$content  = $this->fetch('index');
+        //dump($content);
 
     }
     public function resultSuccess(){
