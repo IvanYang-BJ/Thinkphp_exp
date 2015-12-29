@@ -54,10 +54,10 @@ class IndexController extends Controller {
         dump($UserAnd);
 
         $UserByName = $User->getByName('testList1');
-        $UserByAge = $User->getByAge('34');
         echo '$UserByName'.BR;
         dump($UserByName);
 
+        $UserByAge = $User->getByAge('34');
         echo '$UserByAge'.BR;
         dump($UserByAge);
 
@@ -136,13 +136,13 @@ class IndexController extends Controller {
         echo BR.$id.BR;
     }
 
-    public function show(){
+    public function a(){
         $array['name'] = 'yy';
         $array['email'] = '1257@11.com';
         $array['phone'] = '123321123123';
-
+        //$name = 'Thinkphp';
         $this->assign($array);
-        $this->display('');
+        $this->show();
 
     }
     public function resultSuccess(){
