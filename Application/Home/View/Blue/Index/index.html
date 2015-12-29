@@ -6,8 +6,19 @@
 </head>
 <body>
     Internal Template <br>
-    Hello {$name}<br>
-    Hello {$email}<br>
-    Hello {$phone}<br>
+    $name = {$name}<br>
+    $email = {$email}<br>
+    $phone = {$phone}<br>
+
+    $data.item1 = {$data.item1}<br>
+    $data.item2 = {$data.item2}<br>
+    $data.item3 = {$data.item3|default="No value"}<br>
+
+    {$Think.server.script_name}<br>
+    {$Think.session.user_id}<br>
+    {$Think.cookie.name}<br>
+    {$Think.lang.var_error}<br>
+
+    {$user.nickname|default="这家伙很懒，什么也没留下"}
 </body>
 </html>
