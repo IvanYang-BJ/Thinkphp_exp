@@ -6,7 +6,15 @@
 </head>
 <body>
 php Template <br>
-<?php echo $name.'['.$email.''.$phone.']';?>
+<?php echo $name.'['.$email.''.$phone.']';?><br>
+
+<volist name="list" id="vo" offset="2" length="5" key="k">
+    {$k}-->{$key}-->{$vo.id}:{$vo.name}:{$vo.age}<br/>
+</volist>
+-------------------------------<br/>
+<volist name = 'list' id="vo" mod="2">
+  <eq name="mod" value="0">{$vo.id}:{$vo.name}:{$vo.age}<br/></eq>
+</volist>
 </body>
 </html>
 <!--

@@ -151,6 +151,13 @@ class IndexController extends Controller {
         //dump($content);
 
     }
+
+    public function testTag(){
+        $User = M('User');
+        $list = $User->select();
+        $this->assign('list',$list);
+        $this->display('a');
+    }
     public function resultSuccess(){
         echo "Success".BR;
         return 'success';
