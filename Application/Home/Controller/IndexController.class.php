@@ -141,8 +141,12 @@ class IndexController extends Controller {
         $array['email'] = '1257@11.com';
         $array['phone'] = '123321123123';
         //$name = 'Thinkphp';
+
+        $data['item1'] = 'item1';
+        $data['item2'] = 'item2';
         $this->assign($array);
-        $this->theme('Red')->display('index');
+        $this->assign('data',$data);
+        $this->display('index');
         //$content  = $this->fetch('index');
         //dump($content);
 
