@@ -7,7 +7,7 @@
 <body>
 php Template <br>
 <?php echo $name.'['.$email.''.$phone.']';?><br>
-
+{$Think.server.script_name}<br>
 <volist name="list" id="vo" offset="2" length="5" key="k">
     {$k}-->{$key}-->{$vo.id}:{$vo.name}:{$vo.age}<br/>
 </volist>
@@ -15,6 +15,16 @@ php Template <br>
 <volist name = 'list' id="vo" mod="2">
   <eq name="mod" value="0">{$vo.id}:{$vo.name}:{$vo.age}<br/></eq>
 </volist>
+-------------------------------<br/>
+<volist name = 'list' id="vo">
+    {$vo.id|md5}  || {$vo.name|md5} <br>
+</volist>
+-------------------------------<br/>
+    {$create_time|date="Y-m-d A",###}
+
+-------------------------------<br/>
+    {$localtime}<br>
+    {$localtime_assoc}<br>
 </body>
 </html>
 <!--

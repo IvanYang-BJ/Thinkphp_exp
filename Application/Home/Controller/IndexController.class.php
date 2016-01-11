@@ -155,7 +155,13 @@ class IndexController extends Controller {
     public function testTag(){
         $User = M('User');
         $list = $User->select();
+        $create_time = time();
         $this->assign('list',$list);
+        $this->assign('create_time',$create_time);
+        $localtime = localtime();
+        $localtime_assoc = localtime(time(), true);
+        $this->assign('localtime',$localtime);
+        $this->assign('localtime_assoc',$localtime_assoc);
         $this->display('a');
     }
     public function resultSuccess(){
